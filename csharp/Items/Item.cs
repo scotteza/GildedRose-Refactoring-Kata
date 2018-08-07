@@ -35,6 +35,7 @@
 
         public virtual void HandleExpiry()
         {
+            // TODO: remove duplication of this everywhere
             if (!IsExpired())
             {
                 return;
