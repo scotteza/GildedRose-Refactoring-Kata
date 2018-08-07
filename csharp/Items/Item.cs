@@ -47,12 +47,7 @@
             }
         }
 
-        protected bool IsExpired()
-        {
-            return SellIn < 0;
-        }
-
-        public void HandleQualityChanges()
+        public virtual void HandleQualityChanges()
         {
             if (Name != "Aged Brie" && Name != "Backstage passes to a TAFKAL80ETC concert")
             {
@@ -90,6 +85,11 @@
                     }
                 }
             }
+        }
+
+        protected bool IsExpired()
+        {
+            return SellIn < 0;
         }
     }
 }
