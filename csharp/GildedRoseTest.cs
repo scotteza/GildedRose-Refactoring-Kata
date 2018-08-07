@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace GildedRose
 {
@@ -7,12 +7,15 @@ namespace GildedRose
     public class GildedRoseTest
     {
         [Test]
-        public void foo()
+        public void Create_An_Item_Named_Foo()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
-            GildedRose app = new GildedRose(Items);
+            var items = new List<Item>
+            {
+                new Item { Name = "foo", SellIn = 0, Quality = 0 }
+            };
+            var app = new GildedRose(items);
             app.UpdateQuality();
-            Assert.AreEqual("foo", Items[0].Name);
+            Assert.AreEqual("foo", items[0].Name);
         }
     }
 }
