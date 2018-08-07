@@ -8,6 +8,10 @@
             {
                 case "Sulfuras, Hand of Ragnaros":
                     return new LegendaryItem(name, sellIn, quality);
+                case "Backstage passes to a TAFKAL80ETC concert":
+                    return new BackstagePassItem(name, sellIn, quality);
+                case "Aged Brie":
+                    return new CheeseItem(name, sellIn, quality);
                 default:
                     return new BasicItem(name, sellIn, quality);
             }
@@ -31,33 +35,40 @@
 
         public void HandleExpiredProducts()
         {
-            if (SellIn < 0)
+            if (!IsExpired())
             {
-                if (Name != "Aged Brie")
+                return;
+            }
+
+            if (Name != "Aged Brie")
+            {
+                if (Name != "Backstage passes to a TAFKAL80ETC concert")
                 {
-                    if (Name != "Backstage passes to a TAFKAL80ETC concert")
+                    if (Quality > 0)
                     {
-                        if (Quality > 0)
+                        if (Name != "Sulfuras, Hand of Ragnaros")
                         {
-                            if (Name != "Sulfuras, Hand of Ragnaros")
-                            {
-                                Quality = Quality - 1;
-                            }
+                            Quality = Quality - 1;
                         }
-                    }
-                    else
-                    {
-                        Quality = Quality - Quality;
                     }
                 }
                 else
                 {
-                    if (Quality < 50)
-                    {
-                        Quality = Quality + 1;
-                    }
+                    Quality = Quality - Quality;
                 }
             }
+            else
+            {
+                if (Quality < 50)
+                {
+                    Quality = Quality + 1;
+                }
+            }
+        }
+
+        private bool IsExpired()
+        {
+            return SellIn < 0;
         }
     }
 }
