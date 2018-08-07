@@ -20,7 +20,7 @@ namespace GildedRose
 
                 currentItem.DecreaseSellin();
 
-                currentItem.HandleExpiredProducts();
+                currentItem.HandleExpiry();
             }
         }
 

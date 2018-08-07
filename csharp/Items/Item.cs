@@ -33,7 +33,7 @@
             SellIn--;
         }
 
-        public void HandleExpiredProducts()
+        public virtual void HandleExpiry()
         {
             if (!IsExpired())
             {
