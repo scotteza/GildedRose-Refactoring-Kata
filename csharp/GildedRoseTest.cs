@@ -11,7 +11,7 @@ namespace GildedRose
         {
             var items = new List<Item>
             {
-                new Item { Name = "foo", SellIn = 0, Quality = 0 }
+                Item.GetItem( "foo", 0, 0)
             };
             var app = new GildedRose(items);
             app.UpdateQuality();

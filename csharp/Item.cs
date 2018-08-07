@@ -2,11 +2,7 @@
 {
     public class Item
     {
-        public Item()
-        {
-        }
-
-        public Item(string name, int sellIn, int quality)
+        private Item(string name, int sellIn, int quality)
         {
             Name = name;
             SellIn = sellIn;
