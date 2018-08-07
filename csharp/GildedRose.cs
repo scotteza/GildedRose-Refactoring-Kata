@@ -6,9 +6,9 @@ namespace GildedRose
     {
         private readonly IList<Item> items;
 
-        public GildedRose(IList<Item> Items)
+        public GildedRose(IList<Item> items)
         {
-            this.items = Items;
+            this.items = items;
         }
 
         public void UpdateQuality()
