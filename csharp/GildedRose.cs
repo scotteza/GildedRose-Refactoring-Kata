@@ -13,10 +13,8 @@ namespace GildedRose
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < items.Count; i++)
+            foreach (var currentItem in items)
             {
-                var currentItem = items[i];
-
                 HandleQualityChanges(currentItem);
 
                 HandleSellInChanges(currentItem);
