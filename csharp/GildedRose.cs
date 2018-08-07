@@ -4,17 +4,18 @@ namespace GildedRose
 {
     public class GildedRose
     {
-        IList<Item> Items;
+        private readonly IList<Item> items;
+
         public GildedRose(IList<Item> Items)
         {
-            this.Items = Items;
+            this.items = Items;
         }
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < Items.Count; i++)
+            for (var i = 0; i < items.Count; i++)
             {
-                var currentItem = Items[i];
+                var currentItem = items[i];
 
                 HandleQualityChanges(currentItem);
 
