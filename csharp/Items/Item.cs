@@ -4,7 +4,13 @@
     {
         public static Item GetItem(string name, int sellIn, int quality)
         {
-            return new BasicItem(name, sellIn, quality);
+            switch (name)
+            {
+                case "Sulfuras, Hand of Ragnaros":
+                    return new LegendaryItem(name, sellIn, quality);
+                default:
+                    return new BasicItem(name, sellIn, quality);
+            }
         }
 
         public string Name { get; set; }

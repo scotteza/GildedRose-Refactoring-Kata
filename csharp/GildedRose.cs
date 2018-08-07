@@ -66,10 +66,7 @@ namespace GildedRose
 
         private static void HandleSellInChanges(Item currentItem)
         {
-            if (currentItem.Name != "Sulfuras, Hand of Ragnaros")
-            {
-                currentItem.SellIn = currentItem.SellIn - 1;
-            }
+            currentItem.DecreaseSellin();
         }
 
         private static void HandleExpiredProducts(Item currentItem)

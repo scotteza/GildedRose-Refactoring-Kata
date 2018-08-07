@@ -8,7 +8,7 @@ using System.Text;
 namespace GildedRose
 {
     [TestFixture]
-    [UseReporter(typeof(NUnitReporter))]
+    [UseReporter(typeof(DiffReporter))]
     public class ApprovalTest
     {
         [Test]
