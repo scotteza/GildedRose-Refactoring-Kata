@@ -46,10 +46,7 @@
                 {
                     if (Quality > 0)
                     {
-                        if (Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Quality = Quality - 1;
-                        }
+                        Quality = Quality - 1;
                     }
                 }
                 else
