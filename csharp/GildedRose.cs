@@ -18,10 +18,7 @@ namespace GildedRose
 
                 HandleQualityChanges(currentItem);
 
-                if (currentItem.Name != "Sulfuras, Hand of Ragnaros")
-                {
-                    currentItem.SellIn = currentItem.SellIn - 1;
-                }
+                HandleSellInChanges(currentItem);
 
                 if (currentItem.SellIn < 0)
                 {
@@ -50,6 +47,14 @@ namespace GildedRose
                         }
                     }
                 }
+            }
+        }
+
+        private static void HandleSellInChanges(Item currentItem)
+        {
+            if (currentItem.Name != "Sulfuras, Hand of Ragnaros")
+            {
+                currentItem.SellIn = currentItem.SellIn - 1;
             }
         }
 
