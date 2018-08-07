@@ -1,4 +1,4 @@
-﻿namespace GildedRose
+﻿namespace GildedRose.Items
 {
     public abstract class Item
     {
@@ -16,13 +16,6 @@
             Name = name;
             SellIn = sellIn;
             Quality = quality;
-        }
-    }
-
-    public class BasicItem : Item
-    {
-        public BasicItem(string name, int sellIn, int quality) : base(name, sellIn, quality)
-        {
         }
     }
 }

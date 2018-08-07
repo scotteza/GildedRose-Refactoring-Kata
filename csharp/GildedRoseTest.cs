@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using GildedRose.Items;
+using NUnit.Framework;
 using System.Collections.Generic;
 
 namespace GildedRose

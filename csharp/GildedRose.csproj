@@ -59,7 +59,8 @@
     <Compile Include="ApprovalTest.cs" />
     <Compile Include="GildedRose.cs" />
     <Compile Include="GildedRoseTest.cs" />
-    <Compile Include="Item.cs" />
+    <Compile Include="Items\BasicItem.cs" />
+    <Compile Include="Items\Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
