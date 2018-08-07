@@ -40,16 +40,9 @@
                 return;
             }
 
-            if (Name != "Backstage passes to a TAFKAL80ETC concert")
+            if (Quality > 0)
             {
-                if (Quality > 0)
-                {
-                    Quality = Quality - 1;
-                }
-            }
-            else
-            {
-                Quality = Quality - Quality;
+                Quality = Quality - 1;
             }
         }
 
