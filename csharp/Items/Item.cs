@@ -54,38 +54,37 @@
 
         public void HandleQualityChanges()
         {
-            var currentItem = this;
-            if (currentItem.Name != "Aged Brie" && currentItem.Name != "Backstage passes to a TAFKAL80ETC concert")
+            if (Name != "Aged Brie" && Name != "Backstage passes to a TAFKAL80ETC concert")
             {
-                if (currentItem.Quality > 0)
+                if (Quality > 0)
                 {
-                    if (currentItem.Name != "Sulfuras, Hand of Ragnaros")
+                    if (Name != "Sulfuras, Hand of Ragnaros")
                     {
-                        currentItem.Quality = currentItem.Quality - 1;
+                        Quality = Quality - 1;
                     }
                 }
             }
             else
             {
-                if (currentItem.Quality < 50)
+                if (Quality < 50)
                 {
-                    currentItem.Quality = currentItem.Quality + 1;
+                    Quality = Quality + 1;
 
-                    if (currentItem.Name == "Backstage passes to a TAFKAL80ETC concert")
+                    if (Name == "Backstage passes to a TAFKAL80ETC concert")
                     {
-                        if (currentItem.SellIn < 11)
+                        if (SellIn < 11)
                         {
-                            if (currentItem.Quality < 50)
+                            if (Quality < 50)
                             {
-                                currentItem.Quality = currentItem.Quality + 1;
+                                Quality = Quality + 1;
                             }
                         }
 
-                        if (currentItem.SellIn < 6)
+                        if (SellIn < 6)
                         {
-                            if (currentItem.Quality < 50)
+                            if (Quality < 50)
                             {
-                                currentItem.Quality = currentItem.Quality + 1;
+                                Quality = Quality + 1;
                             }
                         }
                     }
