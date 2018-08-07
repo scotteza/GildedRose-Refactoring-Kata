@@ -17,5 +17,10 @@
             SellIn = sellIn;
             Quality = quality;
         }
+
+        public virtual void DecreaseSellin()
+        {
+            SellIn--;
+        }
     }
 }
