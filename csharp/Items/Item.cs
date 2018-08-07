@@ -28,5 +28,36 @@
         {
             SellIn--;
         }
+
+        public void HandleExpiredProducts()
+        {
+            if (SellIn < 0)
+            {
+                if (Name != "Aged Brie")
+                {
+                    if (Name != "Backstage passes to a TAFKAL80ETC concert")
+                    {
+                        if (Quality > 0)
+                        {
+                            if (Name != "Sulfuras, Hand of Ragnaros")
+                            {
+                                Quality = Quality - 1;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Quality = Quality - Quality;
+                    }
+                }
+                else
+                {
+                    if (Quality < 50)
+                    {
+                        Quality = Quality + 1;
+                    }
+                }
+            }
+        }
     }
 }
