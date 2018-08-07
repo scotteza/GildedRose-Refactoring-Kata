@@ -51,5 +51,46 @@
         {
             return SellIn < 0;
         }
+
+        public void HandleQualityChanges()
+        {
+            var currentItem = this;
+            if (currentItem.Name != "Aged Brie" && currentItem.Name != "Backstage passes to a TAFKAL80ETC concert")
+            {
+                if (currentItem.Quality > 0)
+                {
+                    if (currentItem.Name != "Sulfuras, Hand of Ragnaros")
+                    {
+                        currentItem.Quality = currentItem.Quality - 1;
+                    }
+                }
+            }
+            else
+            {
+                if (currentItem.Quality < 50)
+                {
+                    currentItem.Quality = currentItem.Quality + 1;
+
+                    if (currentItem.Name == "Backstage passes to a TAFKAL80ETC concert")
+                    {
+                        if (currentItem.SellIn < 11)
+                        {
+                            if (currentItem.Quality < 50)
+                            {
+                                currentItem.Quality = currentItem.Quality + 1;
+                            }
+                        }
+
+                        if (currentItem.SellIn < 6)
+                        {
+                            if (currentItem.Quality < 50)
+                            {
+                                currentItem.Quality = currentItem.Quality + 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
